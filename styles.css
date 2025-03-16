@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Norse-Bold";
+  src: url("/fonts/Norse-Bold.otf");
+}
+
+h1 {
+  border: 3px solid red;
+}
