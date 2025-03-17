@@ -1,3 +1,8 @@
+:root {
+  --form-gap: 5px;
+  --btn-color: #596d48;
+}
+
 @font-face {
   font-family: "Norse-Bold";
   src: url("/fonts/Norse-Bold.otf");
@@ -11,10 +16,11 @@
 body {
   display: flex;
   flex-direction: row;
+  height: 100vh;
 }
 
 .header {
-  width: 400px;
+  width: 800px;
   position: relative;
   overflow: hidden;
 }
@@ -62,4 +68,97 @@ body {
   text-align: center;
   padding: 5px;
   font-weight: 500;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section {
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-section {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main p,
+.main h2 {
+  margin-bottom: 10px;
+}
+
+.main p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.main h2 {
+  color: rgb(60, 60, 60);
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--form-gap);
+  padding: 10px 0 20px 0;
+  width: 500px;
+}
+
+.form-element {
+  width: calc(50% - var(--form-gap) * 2);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-element label {
+  color: rgb(60, 60, 60);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-element input {
+  width: 200px;
+  border: 2px solid #e5e7eb;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 2px;
+}
+
+.account-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.account-section span a {
+  color: #596d48;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.create-account-btn {
+  color: white;
+  background-color: var(--btn-color);
+  border: 3px solid transparent;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--btn-color);
+    background-color: white;
+    border-color: var(--btn-color);
+  }
 }
